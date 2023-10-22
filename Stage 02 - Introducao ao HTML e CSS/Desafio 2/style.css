@@ -1,0 +1,113 @@
+:root {
+  --branquinho: #eceff2;
+  --cinzinha: #828282;
+  --magentinha: #ee24ff;
+  --shockinho: #3f3d56;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  text-align: center;
+  margin: 64px auto 64px;
+  width: 540px;
+}
+.front-image {
+  width: 350px;
+  height: 238px;
+  flex-shrink: 0;
+}
+.info {
+  margin: 0 auto 64px;
+  padding: 0;
+  margin: 0;
+}
+.info h1 {
+  margin: 0 auto 16px;
+  color: var(--shockinho);
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Dosis;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.info h1 span {
+  color: var(--magentinha);
+  font-family: Dosis;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.info p {
+  color: var(--cinzinha);
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 146.667% */
+  margin-bottom: 32px;
+  padding: 0;
+}
+.info p span.destaque-negrito {
+  color: var(--shockinho);
+  font-family: Open Sans;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+}
+.info p span.destaque-apagado {
+  color: var(--cinzinha);
+  font-family: Open Sans;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+}
+.line {
+  border: 1px solid var(--branquinho);
+  height: 0;
+  width: 391px;
+  stroke-width: 1px;
+  stroke: #eceff2;
+  margin: 0 auto 16px;
+}
+.footer {
+  text-align: center;
+  width: 540px;
+  margin: 0 auto 145px;
+}
+.footer a {
+  display: inline-block;
+  margin-right: 42px;
+  color: #3f3d56;
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 147.682%; /* 22.152px */
+  text-decoration: none;
+}
+.footer :nth-child(3) {
+  margin-right: 0;
+}
+.wave {
+  position: fixed;
+  width: 100%;
+  bottom: -50px;
+}
