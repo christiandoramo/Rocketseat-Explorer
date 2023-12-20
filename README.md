@@ -1,2 +1,1 @@
-# Rocketseat-Explorer
-Repositorio do curso Explorer da Rocketseat
+Resolucao de exercicios e desafios da trilha Explorer da Rocketseat
