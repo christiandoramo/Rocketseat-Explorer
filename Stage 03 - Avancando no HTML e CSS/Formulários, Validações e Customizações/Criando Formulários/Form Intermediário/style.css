@@ -1,0 +1,36 @@
+:root{
+    --branquinho: #fff;
+    --begezinho: #FF5374;
+    --magentinha: #535971;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    min-height: 100vh;
+    background: var(--darker, black);
+}
+
+.container {
+    margin: 0 auto;
+    padding: 71px 99px 23px 94px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
