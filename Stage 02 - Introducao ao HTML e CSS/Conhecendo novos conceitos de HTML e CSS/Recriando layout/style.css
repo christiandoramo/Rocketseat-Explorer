@@ -1,0 +1,147 @@
+:root {
+    --darker: #2f2e41;
+    --dark: #00bfa6;
+    --light: #c2c2c2;
+    --lighter: #fff;
+
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-size: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "JetBrains Mono", sans-serif;
+    color: white;
+    min-height: 100vh;
+    background: var(--darker, black);
+}
+
+.container {
+    background: linear-gradient(180deg, rgb(227, 255, 248, 0) 82.08%, var(--darker, black) 100%);
+    margin: 0 auto;
+    padding: 71px 99px 23px 94px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+header {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    margin-bottom: 109px;
+}
+
+header nav {
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 64px;
+    align-items: center;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ul li a {
+    opacity: 0.5;
+}
+
+ul li a:hover {
+    opacity: 1;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 77px;
+    margin-bottom: 157px;
+}
+
+section {
+    margin: 0;
+    margin-left: auto;
+    max-width: 606px;
+}
+
+section h1 {
+    margin-bottom: 49px;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: center;
+}
+
+section h1 span {
+    color: #00BFA6;
+}
+
+section p {
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    color: #00BFA6;
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+section p span {
+    color: #C2C2C2;
+    font-weight: 700;
+}
+
+footer {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 27px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+footer div {
+    margin: 0;
+    border-radius: 50%;
+    width: 568px;
+    background: #00BFA6;
+    height: 1px;
+}
+
+.lock {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
