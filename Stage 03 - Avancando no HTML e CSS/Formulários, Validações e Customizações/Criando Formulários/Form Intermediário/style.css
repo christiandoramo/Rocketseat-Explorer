@@ -1,7 +1,10 @@
-:root{
-    --branquinho: #fff;
+:root {
+    --branquinho: #EFEFEF;
     --begezinho: #FF5374;
     --magentinha: #535971;
+    --magenta: #4E4958;
+    --Back-Lines-in-white: #E6E6F0;
+    --Shapes-02: #FAFAFC;
 }
 
 *,
@@ -22,15 +25,189 @@ body {
     font-family: "Poppins", sans-serif;
     color: white;
     min-height: 100vh;
-    background: var(--darker, black);
+    background: var(--branquinho, black);
+    width: 1440px;
+    color: var(--magenta, white);
 }
 
 .container {
     margin: 0 auto;
-    padding: 71px 99px 23px 94px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
+    width: 100%;
+    position: relative;
+}
+
+header {
+    background-color: #535971;
+    width: 100%;
+    padding: 140px 345px;
+}
+
+header h1 {
+    color: #FFF;
+    font-family: 'Staatliches', sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 18px;
+}
+
+header p {
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.form-card {
+    width: 750px;
+    border-radius: 20px 20px 0px 20px;
+    background: #FFF;
+    padding: 64px;
+}
+
+.form-card h2 {
+    margin-bottom: 16px;
+    color: var(--magentinha, #535971);
+    font-family: 'Staatliches', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+}
+
+.form-card h3 {
+    color: var(--magentinha, #535971);
+    font-family: 'Staatliches', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+    margin-bottom: 10px;
+}
+
+
+.form-card h2 {
+    margin-bottom: 16px;
+    color: var(--magentinha, #535971);
+    font-family: 'Staatliches', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+}
+
+.form-card h2 {
+    margin-bottom: 16px;
+    color: var(--magentinha, #535971);
+    font-family: 'Staatliches', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+}
+
+.form-card section {
+    margin-bottom: 30px;
+}
+
+.divider {
+    width: 622px;
+    height: 1px;
+    background: #E6E6F0;
+    margin-bottom: 36px;
+}
+
+.label-input {
+    display: flex;
+    flex-direction: column;
+    margin-right: 22px;
+}
+
+.label-input input {
+    width: 300px;
+    height: 56px;
+    border-radius: 8px;
+    border: 1px solid var(--Back-Lines-in-white, #E6E6F0);
+    background: var(--Shapes-02, #FAFAFC);
+}
+
+.label-input label {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+
+.label-input-row {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.label-input span {
+    color: #C1BCCC;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.label-input-row .label-input.time,
+.label-input-row .label-input.date {
+    margin-right: 0;
+}
+
+section .label-input-row .label-input.date input {
+    width: 300px;
+    margin-right: 32px;
+}
+
+section .label-input-row .label-input.time input {
+    width: 140px;
+    margin-right: 10px;
+}
+
+.label-input input.mentor-name-input {
+    width: 622px;
+}
+
+.form-bottom {
+    background-color: var(--magentinha, black);
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 0px 20px 20px;
+    padding: 52px 71px;
+}
+
+.form-bottom button {
+    border-radius: 20px;
+    background: #FF5374;
+    display: flex;
+    width: 608px;
+    height: 55.652px;
+    padding: 15px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: 'Staatliches';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+main {
+    position: absolute;
+    left: 345px;
+    top: 322px;
+    padding-bottom: 360px;
 }

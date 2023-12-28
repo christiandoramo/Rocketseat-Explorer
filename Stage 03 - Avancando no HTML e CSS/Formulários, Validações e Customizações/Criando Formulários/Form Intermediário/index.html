@@ -13,7 +13,93 @@
 
 <body>
     <div class="container">
-        formulario Intermediário
+        <header>
+            <h1>
+                Mentoria
+            </h1>
+            <p>
+                Preencha o formulário abaixo para<br>agendar a sua mentoria
+            </p>
+        </header>
+        <main>
+            <form action="/" method="post">
+                <div class="form-card">
+                    <section>
+                        <h2>Informações pessoais</h2>
+                        <div class="divider"></div>
+                        <div class="label-input-row">
+                            <div class="label-input">
+                                <label>Nome</label>
+                                <input>
+                            </div>
+                            <div class="label-input">
+                                <label>Sobrenome</label>
+                                <input>
+                            </div>
+                        </div>
+                        <div class="label-input-row">
+                            <div class="label-input">
+                                <label>Email</label>
+                                <input>
+                            </div>
+                        </div>
+                        <div class="label-input-row">
+                            <div class="label-input">
+                                <label>Senha</label>
+                                <input>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Informações do mentor</h2>
+                        <div class="divider"></div>
+                        <div class="label-input-row">
+                            <div class="label-input mentor-name">
+                                <label>Nome do seu Mentor <span>(só o primeiro nome)</span></label>
+                                <input class="mentor-name-input">
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Seus horários disponíveis</h2>
+                        <div class="divider"></div>
+                        <h3>Primeira mentoria</h3>
+                        <div class="label-input-row">
+                            <div class="label-input date">
+                                <label>Data <span>(DD/MM/AAAA)</span></label>
+                                <input type="date">
+                            </div>
+                            <div class="label-input time">
+                                <label>Das</label>
+                                <input type="time">
+                            </div>
+                            <div class="label-input time">
+                                <label>Até</label>
+                                <input type="time">
+                            </div>
+                        </div>
+                        <h3>Segunda mentoria</h3>
+                        <div class="label-input-row">
+                            <div class="label-input date">
+                                <label>Data <span>(DD/MM/AAAA)</span></label>
+                                <input type="date">
+                            </div>
+                            <div class="label-input time">
+                                <label>Das</label>
+                                <input type="time">
+                            </div>
+                            <div class="label-input time">
+                                <label>Até</label>
+                                <input type="time">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="form-bottom">
+                    <button>Salvar</button>
+                </div>
+            </form>
+        </main>
     </div>
 </body>
 
