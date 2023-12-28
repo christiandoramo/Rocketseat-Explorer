@@ -9,11 +9,96 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Form Avançado</title>
-
 </head>
 
 <body>
-    <div class="container"></div>
+    <div class="container">
+        <form action="/" method="post">
+            <header>
+                <h1>
+                    avalie a sua mentoria
+                </h1>
+                <p>
+                    Chegou a hora de avaliar o seu mentor. Bora lá?
+                </p>
+                <img src="./images/img1.png">
+                <div class="form-header">
+                    <h2>Informações pessoais</h2>
+                </div>
+            </header>
+            <main>
+
+                <div class="form-card">
+                    <section>
+                        <div class="label-input-row">
+                            <div class="label-input">
+                                <label>Nome</label>
+                                <input>
+                            </div>
+                            <div class="label-input">
+                                <label>Sobrenome</label>
+                                <input>
+                            </div>
+                        </div>
+                        <div class="label-input-row">
+                            <div class="label-input">
+                                <label>Email <span>(digite um email válido)</span></label>
+                                <input>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Informações do mentor</h2>
+                        <div class="divider"></div>
+                        <div class="label-input-row">
+                            <div class="label-input select">
+                                <label>Selecione quem foi seu mentor</label>
+                                <select>
+                                    <optgroup>
+                                        <option></option>
+                                        <option></option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="label-input-row">
+                            <div class="label-input textarea">
+                                <label>Feedback sobre o mentor</label>
+                                <textarea></textarea>
+                            </div>
+                        </div>
+                        <div class="label-input-row">
+                            <div class="label-input checkbox">
+                                <input type="checkbox">
+                                <label>Todas as minhas dúvidas foram esclarecidas durante a mentoria.</label>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Agendando próxima mentoria</h2>
+                        <div class="divider"></div>
+                        <div class="label-input-row">
+                            <div class="label-input date">
+                                <label>Data <span>(DD/MM/AAAA)</span></label>
+                                <input type="date">
+                            </div>
+                            <div class="label-input time">
+                                <label>Das</label>
+                                <input type="time">
+                            </div>
+                            <div class="label-input time">
+                                <label>Até</label>
+                                <input type="time">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="form-bottom">
+                    <button>Salvar</button>
+                </div>
+            </main>
+        </form>
+    </div>
 </body>
 
 </html>

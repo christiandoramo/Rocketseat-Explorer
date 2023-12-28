@@ -1,8 +1,12 @@
-:root{
-    --branquinho: #fff;
+:root {
     --begezinho: #F67669;
     --cianinho: #BFD7E4;
-    --azul-escuro:#293241;
+    --azul-escuro: #293241;
+    --branquinho: #EFEFEF;
+    --magentinha: #535971;
+    --magenta: #4E4958;
+    --Back-Lines-in-white: #E6E6F0;
+    --Shapes-02: #FAFAFC;
 }
 
 *,
@@ -23,15 +27,254 @@ body {
     font-family: "Poppins", sans-serif;
     color: white;
     min-height: 100vh;
-    background: var(--darker, black);
+    width: 1440px;
+
 }
 
 .container {
     margin: 0 auto;
-    padding: 71px 99px 23px 94px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
+    width: 100%;
+    position: relative;
+    background: var(--cianinho, black);
+    color: var(--magenta, white);
+}
+
+
+
+.form-card {
+    width: 750px;
+    border-radius: 0;
+    background: #FFF;
+    padding: 64px 64px 0;
+}
+
+.form-card h2 {
+    margin-bottom: 16px;
+    color: var(--magentinha, #535971);
+    font-family: 'Staatliches', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+}
+
+.form-card h3 {
+    color: var(--magentinha, #535971);
+    font-family: 'Staatliches', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+    margin-bottom: 10px;
+}
+
+
+.form-card h2 {
+    margin-bottom: 16px;
+    color: var(--magentinha, #535971);
+    font-family: 'Staatliches', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+}
+
+.form-card h2 {
+    margin-bottom: 16px;
+    color: var(--magentinha, #535971);
+    font-family: 'Staatliches', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+    text-align: center;
+}
+
+.form-card section {
+    margin-bottom: 30px;
+}
+
+.divider {
+    width: 622px;
+    height: 1px;
+    background: #E6E6F0;
+    margin-bottom: 36px;
+}
+
+.label-input {
+    display: flex;
+    flex-direction: column;
+    margin-right: 22px;
+}
+
+.label-input input {
+    width: 300px;
+    height: 56px;
+    border-radius: 8px;
+    border: 1px solid var(--Back-Lines-in-white, #E6E6F0);
+    background: var(--Shapes-02, #FAFAFC);
+}
+
+.label-input label {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+
+.label-input-row {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.label-input span {
+    color: #C1BCCC;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.label-input-row .label-input.time,
+.label-input-row .label-input.date {
+    margin-right: 0;
+}
+
+section .label-input-row .label-input.date input {
+    width: 300px;
+    margin-right: 32px;
+}
+
+section .label-input-row .label-input.time input {
+    width: 140px;
+    margin-right: 10px;
+}
+
+.label-input input.mentor-name-input {
+    width: 622px;
+}
+
+.form-bottom {
+    background-color: white;
+    height: 100%;
+    border-radius: 0px 0px 20px 20px;
+    padding: 52px 71px;
+    margin-bottom: 360px;
+}
+
+.form-bottom button {
+    border-radius: 20px;
+    border-style: none;
+    background: #FF5374;
+    display: flex;
+    width: 608px;
+    height: 55.652px;
+    padding: 15px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: 'Staatliches';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--azul-escuro, black);
+    width: 100vw;
+    padding: 107px 345px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    color: #FFF;
+    font-family: 'Staatliches', sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+
+header p {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 25px;
+}
+
+header img {
+    width: 225px;
+    height: 100px;
+    margin-bottom: 22px;
+}
+
+header .form-header {
+    padding: 50px 275px;
+    border-radius: 20px 20px 0 0;
+    background: var(--begezinho, black);
+    width: 750px;
+}
+
+header .form-header h2 {
+    color: #FFF;
+    font-family: 'Staatliches', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+    text-transform: uppercase;
+}
+
+.label-input.select select {
+    width: 300px;
+    height: 56px;
+    border-radius: 8px;
+    border: 1px solid var(--Back-Lines-in-white, #E6E6F0);
+    background: var(--Shapes-02, #FAFAFC);
+}
+
+.label-input.checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.label-input.checkbox input{
+    width: 24px;
+    margin: 0;
+}
+.label-input.checkbox label{
+    margin: 0 0 0 10px;
+}
+
+
+.label-input.textarea textarea {
+    width: 600px;
+    height: 166px;
+    border-radius: 8px;
+    border: 1px solid var(--Back-Lines-in-white, #E6E6F0);
+    background: var(--Shapes-02, #FAFAFC);
 }

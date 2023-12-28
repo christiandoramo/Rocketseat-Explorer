@@ -187,6 +187,7 @@ section .label-input-row .label-input.time input {
 }
 
 .form-bottom button {
+    border-style: none;
     border-radius: 20px;
     background: #FF5374;
     display: flex;
