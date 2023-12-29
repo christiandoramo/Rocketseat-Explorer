@@ -7,11 +7,16 @@ for (let i = 0; i < numeroAlunos; i++) {
     const aluno = { name: nome, grade1: nota1, grade2: nota2 }
     alunos.push(aluno)
 }
-const calculaMediaCadaAluno = (alunos) => {
+
+function calculaMedia(a, b) {
+    return (a + b) / arguments.length
+}
+
+const listarCadaAluno = (alunos) => {
     alunos.map((aluno) => {
-        const media = (aluno.grade1 + aluno.grade2)/ 2
-        const situacao = (media>=7) ? 'Aluno(a) aprovado(a) no concurso' : 'Aluno(a) aprovado(a) no concurso';
+        const media = calculaMedia(aluno.grade1, aluno.grade2)
+        const situacao = (media >= 7) ? 'Aluno(a) aprovado(a) no concurso' : 'Aluno(a) reprovado(a) no concurso';
         alert(`Aluno(a) ${aluno.name}\nMédia: ${media}\nSituação: ${situacao}`)
     })
 }
-calculaMediaCadaAluno(alunos)
+listarCadaAluno(alunos)
