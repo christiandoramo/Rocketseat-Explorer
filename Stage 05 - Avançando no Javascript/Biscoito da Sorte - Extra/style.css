@@ -1,0 +1,55 @@
+:root {
+    --textoGrande: #34355B;
+}
+
+body {
+    background: linear-gradient(45deg, #190361, #bb00ff);
+    animation: gradient 5s ease infinite;
+    background-size: 200% 200%;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    position: relative;
+    background: var(--cianinho, black);
+    color: var(--magenta, white);
+}
