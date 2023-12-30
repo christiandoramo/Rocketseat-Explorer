@@ -1,0 +1,1 @@
+const timeElement = document.querySelector('.time')
