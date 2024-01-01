@@ -1,0 +1,153 @@
+:root {
+    --time: #323238;
+    --selected: #02799D;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    font-size: 100%;
+    color: black;
+}
+
+.container {
+    padding: 10px;
+}
+
+.theme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+    margin-left: auto;
+}
+
+i.ph.ph-moon {
+    font-size: 3rem;
+}
+
+header {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+main {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    /* padding: 500px; */
+}
+
+.card {
+    display: flex;
+    padding: 188px 226px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);
+    gap: 30px;
+}
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.datetime {
+    color: var(--time, black);
+    text-align: center;
+    font-family: Roboto;
+    /* font-size: 126.166px; */
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings {
+    display: flex;
+    gap: 10px;
+}
+
+.settings {
+    display: flex;
+    gap: 10px;
+}
+
+.settings {
+    display: flex;
+    gap: 10px;
+}
+
+.sounds {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sound {
+    padding: 10px;
+}
+
+.selected {
+    background-color: var(--selected, black);
+    color: white;
+}
+
+.hide {
+    display: none;
+}
+
+.piscando {
+    animation: piscar 0.5s infinite;
+}
+
+@keyframes piscar {
+    0% {
+        background-color: transparent;
+        color: black;
+    }
+
+    50% {
+        background-color: var(--selected, black);
+        color: white;
+    }
+
+    /* Cor de fundo ao piscar */
+    100% {
+        background-color: transparent;
+        color: black;
+    }
+}
+
+.plus,
+.minus,
+.stop,
+.pause,
+.play {
+    border-radius: 5px;
+    border-style: none;
+    cursor: pointer;
+}
+
+.desabilitado {
+    cursor: default;
+    pointer-events: none;
+}
