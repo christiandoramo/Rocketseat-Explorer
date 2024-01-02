@@ -1,0 +1,19 @@
+{
+  "name": "spa-universe",
+  "version": "1.0.0",
+  "description": "atividade da rocketseat - SPA universe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Erro: teste nao foi especificado\" && exit 1",
+    "start": "lite-server"
+  },
+  "keywords": [
+    "node",
+    "spa"
+  ],
+  "author": "christian oliveira",
+  "license": "ISC",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

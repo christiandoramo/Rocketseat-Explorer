@@ -1,47 +1,17 @@
-:root {
-    --time: #323238;
-    --selected: #02799D;
-    --selectedText: white;
-    --normalColor: black;
-    --bgColor: black;
-    --cardColor: white;
-    --borderColor: rgba(0, 0, 0, 0.80);
+main.home {
+    justify-content: center;
+    align-items: center;
 }
 
-.dark {
-    --time: #bfbfdd;
-    --selected: #787979;
-    --selectedText: rgb(0, 0, 0);
-    --normalColor: rgb(255, 255, 255);
-    --borderColor: rgba(255, 255, 255, 0.80);
-    --bgColor: rgb(26, 49, 42);
-    --cardColor: black;
+.container.home {
+    background-image: url('./../../assets/images/mountains-universe-1.png');
 }
 
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
+.container.exploracao {
+    background-image: url('./../../assets/images/mountains-universe-3.png');
+    
 }
 
-html {
-    font-family: 'Roboto', sans-serif;
+.container.o-universo {
+    background-image: url('./../../assets/images/mountains-universe02.png');
 }
-
-body {
-    height: 100dvh;
-    width: 100dvw;
-    font-size: 100%;
-    color: var(--normalColor);
-    background-color: var(--bgColor);
-}
-
-/* .container {
-    padding: 10px;
-} */
