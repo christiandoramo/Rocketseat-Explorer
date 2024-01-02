@@ -9,9 +9,7 @@ export class Router {
         event.preventDefault()
         window.history.pushState({}, "", event.target.href)
         //gambiarra para desmarcar link de navegacao
-        const elementLink = event.target
-        const otherLinks = Array.from(document.querySelectorAll('a')).filter(link => link != elementLink);
-
+        const otherLinks = Array.from(document.querySelectorAll('a')).filter(link => link != event.target);
         otherLinks.forEach((a) => a.classList.remove('ativado'))
         if (!elementLink.classList.contains('ativado'))
             elementLink.classList.add('ativado')
