@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Focus Timer</title>
 </head>
 
@@ -16,46 +16,65 @@
     <div class="container">
         <header>
             <div class="theme">
-                <i class="ph ph-moon"></i>
+                <span class="sr-only">Ativar/Desativar modo claro/escuro</span>
+                <i class="ph ph-moon moon"></i>
+                <i class="ph ph-sun sun hide"></i>
             </div>
         </header>
         <main>
             <div class="card">
                 <div class="timer">
+                    <span class="sr-only">Temporizador</span>
                     <div class="datetime">
+                        <span class="sr-only">Minutos</span>
                         <div class="minutes">00</div>
                         <div class="dois-pontos">:</div>
+                        <span class="sr-only">Segundos</span>
                         <div class="seconds">00</div>
                     </div>
                     <div class="settings">
-                        <div class="play">
+                        <div class="tool play">
+                            <span class="sr-only">Inicar</span>
                             <i class="ph ph-play-circle"></i>
                         </div>
-                        <div class="pause hide selected">
+                        <div class="tool pause hide selected">
+                            <span class="sr-only">Pausar</span>
                             <i class="ph ph-pause-circle"></i>
                         </div>
-                        <div class="stop">
+                        <div class="tool stop desabilitado">
+                            <span class="sr-only">Parar</span>
                             <i class="ph ph-stop-circle"></i>
                         </div>
-                        <div class="plus">
+                        <div class="tool plus">
+                            <span class="sr-only">Aumentar temporizador em 5 minutos</span>
                             <i class="ph ph-plus-circle"></i>
                         </div>
-                        <div class="minus">
+                        <div class="tool minus desabilitado">
+                            <span class="sr-only">Diminuir temporizador em 5 minutos</span>
                             <i class="ph ph-minus-circle"></i>
                         </div>
                     </div>
                 </div>
                 <div class="sounds">
-                    <div class="sound floresta">
+                    <span class="sr-only">Tocador de música ambiente</span>
+                    <div class="sound tree">
+                        <span class="sr-only">Tocar/Pausar som de floresta</span>
+                        <audio class="tree audio" src="./../assets/audios/Floresta.wav"></audio>
                         <i class="ph ph-tree"></i>
                     </div>
-                    <div class="sound chuva">
+                    <div class="sound cloud-rain">
+                        <span class="sr-only">Tocar/Pausar som de chuva</span>
+                        <audio class="rain audio" src="./../assets/audios/Chuva.wav"></audio>
                         <i class="ph ph-cloud-rain"></i>
                     </div>
-                    <div class="sound cafeteria">
+                    <div class="sound storefront">
+                        <span class="sr-only">Tocar/Pausar som de cafeteria</span>
+                        <audio class="storefront audio" src="./../assets/audios/Cafeteria.wav"></audio>
                         <i class="ph ph-storefront"></i>
                     </div>
-                    <div class="sound fogueira">
+                    <div class="sound flame">
+                        <span class="sr-only">Tocar/Pausar som de fogueira</span>
+                        <audio class="flame audio" src="./../assets/audios/Lareira.wav"></audio>
                         <i class="ph ph-flame"></i>
                     </div>
                 </div>
@@ -80,7 +99,7 @@
         <i class="ph ph-timer"></i>
         <i class="ph ph-bell-ringing"></i> -->
     </div>
-    <script src="./main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

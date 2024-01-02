@@ -1,7 +1,12 @@
 const timeout = 500
 
+const theme = document.querySelector('.theme');
+const moon = theme.querySelector('.moon');
+const sun = theme.querySelector('.sun');
+
+
 const realTime = {
-    initialMinutes: "25",
+    initialMinutes: "00",
     initialSeconds: "00",
     playing: false,
     minutes: document.querySelector('.minutes'),
@@ -14,6 +19,10 @@ const tools = {
     play: document.querySelector(".play"),
     stop: document.querySelector(".stop"),
 }
+const player = {
+    blocks: document.querySelectorAll('.sound'),
+    audios: document.querySelectorAll(`.audio`),
+}
 
 function updateRealtime(minutes, seconds) {
     if (minutes < 10) {
@@ -22,9 +31,14 @@ function updateRealtime(minutes, seconds) {
         realTime.minutes.innerHTML = String(minutes)
     }
 
-    if (seconds < 10) {
+    if (minutes > 0 && seconds === 60) {
+        realTime.seconds.innerHTML = 59
+    } else if (seconds === 60 && minutes === 0) {
+        realTime.seconds.innerHTML = "00"
+    } else if (seconds < 10) {
         realTime.seconds.innerHTML = String(seconds).padStart(2, "0")
-    } else {
+    }
+    else {
         realTime.seconds.innerHTML = String(seconds)
     }
 }
@@ -49,7 +63,7 @@ function counter() {
         seconds--
     } else if (seconds === 0) {
         minutes--
-        seconds = 59
+        seconds = 60
     }
     console.log(`${minutes}:${seconds}`)
     updateRealtime(minutes, seconds)
@@ -61,25 +75,20 @@ function plus5minutes() {
     setTimeout(function (e) { tools.plus.classList.remove('desabilitado') }, timeout);
     let minutes = Number(realTime.minutes.innerHTML)
     const seconds = Number(realTime.seconds.innerHTML)
-    if (tools.minus.classList.contains('desabilitado')) {
-        tools.minus.classList.remove('desabilitado');
-    }
+    tools.minus.classList.remove('desabilitado');
     changeTimer(minutes + 5, seconds)
 }
 
 function minus5minutes() {
     let minutes = Number(realTime.minutes.innerHTML)
     const seconds = Number(realTime.seconds.innerHTML)
-    if (minutes - 5 < 0) {
-        return;
-    } else {
-        if (tools.minus.classList.contains('desabilitado'))
-            tools.minus.classList.remove('desabilitado')
-        tools.minus.classList.add('desabilitado')
-        setTimeout(function (e) { tools.plus.classList.remove('desabilitado') }, timeout);
-    }
     selectingTool(tools.minus)
+    tools.minus.classList.add('desabilitado')
+    if (minutes - 5 < 5 === false) {
+        setTimeout(function (e) { tools.minus.classList.remove('desabilitado') }, timeout);
+    }
     changeTimer(minutes - 5, seconds)
+
 }
 
 function Timer() {
@@ -131,9 +140,6 @@ function changeTimer(minutes, seconds) {
     updateRealtime(Number(realTime.minutes.innerHTML), Number(realTime.seconds.innerHTML))
 }
 function stopTimer() {
-    if (realTime.playing === false) {
-        return;
-    }
     tools.stop.classList.add('selected')
     tools.stop.classList.add('desabilitado')
     tools.play.classList.toggle('hide')
@@ -141,7 +147,7 @@ function stopTimer() {
         tools.play.classList.remove('selected')
     tools.pause.classList.toggle('hide')
     realTime.playing = false
-    changeTimer(Number(realTime.minutes.innerHTML), Number(realTime.seconds.innerHTML))
+    changeTimer(Number(realTime.initialMinutes), Number(realTime.initialSeconds))
 }
 function showModalError() {
     alert("Insira um tempo válido")
@@ -159,3 +165,29 @@ function selectingTool(element) {
         element.classList.remove('piscando');
     }, timeout);
 }
+
+
+player.blocks.forEach((block) => {
+    block.addEventListener('click', function () {
+        const otherBlocks = Array.from(player.blocks).filter(b => b !== block);
+        otherBlocks.forEach((b) => b.classList.remove('selected'))
+        const audio = this.querySelector('.audio')
+        const otherAudios = Array.from(player.audios).filter(a => a != audio)
+        otherAudios.forEach((a) => a.pause())
+        if (!audio.paused) {
+            audio.pause()
+            this.classList.remove('selected')
+        }
+        else if (audio.paused) {
+            audio.play()
+            this.classList.add('selected')
+        }
+        console.log(audio.paused)
+    });
+});
+
+theme.addEventListener('click', function (e) {
+    document.documentElement.classList.toggle('dark')
+    sun.classList.toggle('hide')
+    moon.classList.toggle('hide')
+})
