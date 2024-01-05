@@ -6,22 +6,33 @@
 
 :root {
   font-size: 62.5%;
-
-  --ff-primary: 'Poppins', sans-serif;
-  --text-color: #303030;
+  --Semantic-Clors-Danger-light: #F75A68;
+  --ff-primary: 'Roboto', sans-serif;
+  --ff-secondary: 'Roboto Mono', monospace;
+  --text-color: #E1E1E6;
 
   --hue: 194;
-  --primary-color: hsl(var(--hue), 100%, 63%);
+  --primary-color: hsl(var(--hue), 72%, 13%);
+  --secondary-color: rgba(6, 22, 27, 0.5);
+  --tertiary-color: hsl(192, 65%, 7%);
+
+  --input-bg-color: hsl(191, 65%, 7%);
+  --input-color: #7C7C8A;
+  --dark-blue: hsl(195, 91%, 25%);
+  --light-blue: hsl(191, 31%, 42%);
+  --no-favs-bg-color: hsl(192, 63%, 3%);
+  --no-favs-color: #4E5455;
+
 }
 
 body {
   font-size: 1.6rem;
-  color: var(--text-color);
-  background-color: rgb(250, 254, 255);
+  background-color: rgb(0, 0, 0);
 }
 
 body * {
   font-family: var(--ff-primary);
+  color: var(--text-color);
 }
 
 .sr-only {
@@ -37,8 +48,8 @@ body * {
 }
 
 #app {
-  padding: 2rem;
-  max-width: 500px;
+  padding: 10rem 16rem;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -46,8 +57,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  margin: 2.5rem 0;
+  margin: 0 0 6rem 0;
 }
 
 header h1 {
@@ -58,23 +68,66 @@ header h1 {
 .search {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
 .search input {
-  height: 3.2rem;
-  border: 1px solid #ccc;
-  border-radius: .4rem 0 0 .4rem;
-  padding: 0 .8rem;
+  border: 1px none #ccc;
+  padding: 16px;
+  border-radius: 5px;
+  background: #06181C;
+  min-width: 462px;
+  font-size: 16px;
 }
 
 .search button {
   background-color: var(--primary-color);
-  border-radius: 0 .4rem .4rem 0;
-  height: 3.2rem;
   border: none;
-  padding: 0 1rem;
-
+  padding: 12px 32px;
+  border-radius: 5px;
   cursor: pointer;
+  display: flex;
+  gap: 0.8rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all .7s ease;
+}
+
+.search button:active {
+  background-color: red;
+}
+
+.search button div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.search button div p {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.search button img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
 }
 
 .search button:hover {
@@ -84,8 +137,12 @@ header h1 {
 table {
   width: 100%;
   border-collapse: collapse;
+}
 
-  box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+.table {
+  border: 1px solid var(--primary-color);
+  border-radius: 1.2rem;
+  overflow: hidden;
 }
 
 table * {
@@ -93,11 +150,25 @@ table * {
   color: var(--text-color);
 }
 
+tbody {
+  display: block;
+  max-height: 600px;
+  overflow-y: auto;
+  resize: vertical;
+}
+
+thead,
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
 table th {
-  background: var(--primary-color);
   text-align: left;
   font-weight: normal;
   padding: 1.5rem;
+  background: #092D38;
 }
 
 table th:first-child {
@@ -109,11 +180,11 @@ table th:last-child {
 }
 
 table tr:nth-child(even) {
-  background: #eee;
+  background: rgba(6, 22, 27, 0.50);
 }
 
 table tr:nth-child(odd) {
-  background: #ddd;
+  background: #06181C;
 }
 
 table td {
@@ -147,8 +218,49 @@ td.user a p {
 td .remove {
   background: none;
   border: none;
-
-  color: red;
-
+  color: var(--Semantic-Clors-Danger-light, #F75A68);
   cursor: pointer;
+}
+
+.empty-state {
+  font-family: var(--ff-secondary);
+  background-color: var(--no-favs-bg-color);
+
+  display: flex;
+}
+
+.no-favs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+
+  margin: 21rem auto 28.7rem;
+}
+
+.no-favs svg {
+  width: 13.2rem;
+  height: 12.5rem;
+}
+
+.no-favs h2 {
+  font-size: 4rem;
+  line-height: 2.5rem;
+  color: var(--no-favs-color);
+}
+
+.hide {
+  display: none;
+}
+
+tbody::-webkit-scrollbar {
+  width: 2.2rem;
+}
+
+tbody::-webkit-scrollbar-thumb {
+  background-color: var(--light-blue);
+  border-radius: 1rem;
+
+  border: .8rem solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
 }

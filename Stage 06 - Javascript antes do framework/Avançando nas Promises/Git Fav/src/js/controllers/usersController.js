@@ -5,13 +5,15 @@ var entries = []
 export function addUser() {
     const input = document.querySelector('.search input')
     const username = input.value
-    if (entries.find(entry => entry.login === username)) {
+    if (entries.find(entry => entry.login.toLowerCase() === username.toLowerCase())) {
+        alert('Usuario ja favoritado!')
         console.log('Usuario ja favoritado!')
         return
     }
     getUserByUsername(username)
         .then(user => {
             if (user.login === undefined) {
+                alert('Usuario nao encontrado!')
                 console.log('Usuario nao encontrado!')
                 return
             }
@@ -24,7 +26,9 @@ function createRow() {
     const tr = document.createElement('tr')
     tr.innerHTML = `
       <td class="user">
+      <a target="_blank">
         <img>
+        </a>
         <a target="_blank">
           <p></p>
           <span></span>
@@ -35,7 +39,7 @@ function createRow() {
       <td class="followers">
       </td>
       <td>
-        <button class="remove">&times;</button>
+        <button class="remove">Remover</button>
       </td>
     `
     return tr
@@ -64,6 +68,7 @@ function storeUsers() {
 }
 
 export function updatePage() {
+    emptyState()
     removeAllTr()
 
     entries.forEach(user => {
@@ -71,7 +76,7 @@ export function updatePage() {
 
         row.querySelector('.user img').src = `https://github.com/${user.login}.png`
         row.querySelector('.user img').alt = `Imagem de ${user.name}`
-        row.querySelector('.user a').href = `https://github.com/${user.login}`
+        row.querySelectorAll('.user a').forEach(link => link.href = `https://github.com/${user.login}`)
         row.querySelector('.user p').textContent = user.name
         row.querySelector('.user span').textContent = user.login
         row.querySelector('.repositories').textContent = user.public_repos
@@ -81,4 +86,12 @@ export function updatePage() {
         const tbody = document.querySelector('table tbody')
         tbody.append(row)
     })
+}
+
+function emptyState() {
+    if (entries.length === 0) {
+        document.querySelector('.empty-state').classList.remove('hide')
+    } else {
+        document.querySelector('.empty-state').classList.add('hide')
+    }
 }
